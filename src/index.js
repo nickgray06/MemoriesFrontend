@@ -8,7 +8,7 @@ import reducers from './reducers'
 
 import App from './App'
 
-const store = createStore(reducers, compost(appluMiddleware(thunk)))
+const store = createStore(reducers, compose(applyMiddleware(thunk)))
 
 ReactDom.render(
   <Provider store={store}>
